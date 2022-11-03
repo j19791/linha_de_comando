@@ -3,7 +3,8 @@
 - ferramentas na linha de comando podem ser controlados através de scripts: automação
 - Prompt de comando (cmd):  terminal ou console do windows
 - iniciar: prompt ou cmd
-	- inicia automaticamente na pasta inicial
+	- inicia automaticamente na pasta inicial do usuário *Home* 
+		- pasta com as configurações dos programas específicos
 - prompt : > 
 - C:\Users\caelum>
 	- C: partição principal do computador
