@@ -21,7 +21,12 @@
 	- echo Oi Mundo > saida.txt : imprime no arquivo saida.txt
 		- `>` pega a saída de um comando e grava no arquivo indicado ou repassa para outro comando
 		- `>>` cria um arquivo novo quando o arquivo que pedimos não existir! Caso ele já exista, ele adiciona o novo conteúdo ao final do arquivo, sem sobrescrevê-lo
-- `type saida.txt` : ve o conteúdo do arquivo 
+- `type saida.txt` : ve o conteúdo do arquivo todo de uma vez
+- `more saida.txt` : exibir página por página do arquivo
+	- Útil para ler arquivos de logs de uma aplicação que esta num servidor da núvem
+	- `espaço`: navega de página e página
+	- `enter`: navega linha a linha
+	- `q` : sai da navegação do arquivo sem precisar chegar no final
 - `del saida.txt`: apaga o arquivo
 - `copy saida.txt saida2.txt` : cria uma cópia 
 - `rename saida2.txt mensagem.txt` : renomear arquivo e pastas
