@@ -39,6 +39,7 @@
 	- `cd .. ` : sobe na hierárquia de diretórios (diretório acima daquele que vc ja esta)
 - `mkdir codigo` : make directory : cria novo diretório
 - `rmdir codigo_java` : remove o diretório
+- `tree`: mostra as pastas e subpastas organizadas em uma árvore
 
 
 ### Outros comandos
