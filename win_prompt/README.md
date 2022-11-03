@@ -19,6 +19,7 @@
 - `echo Oi Mundo` : imprime no terminal
 	- echo Oi Mundo > saida.txt : imprime no arquivo saida.txt
 		- `>` pega a saída de um comando e grava no arquivo indicado ou repassa para outro comando
+		- `>>` cria um arquivo novo quando o arquivo que pedimos não existir! Caso ele já exista, ele adiciona o novo conteúdo ao final do arquivo, sem sobrescrevê-lo
 - `type saida.txt` : ve o conteúdo do arquivo 
 - `del saida.txt`: apaga o arquivo
 - `copy saida.txt saida2.txt` : cria uma cópia 
