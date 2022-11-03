@@ -30,6 +30,9 @@
 - `dir` : lista todos os arquivos e pastas
 	- `dir .` : lista os arquivos e pastas do diretório atual (o ponto é opcional)
 	- `dir ..` : lista os arquivos e pastas do diretório acima
+	- `dir /O:s` : ordena a saida do comando dir pelo tamanho (s: size)
+	- `dir /O:D` : ordena a saida do comando dir pela data
+	- `dir /O:D  C:\` : mostra o conteúdo do diretório C:\ e ordena a saida do comando dir pela data
 - `cd` : change directory - entra em uma subpasta
 	- `cd .. ` : sobe na hierárquia de diretórios (diretório acima daquele que vc ja esta)
 - `mkdir codigo` : make directory : cria novo diretório
@@ -39,3 +42,4 @@
 ### Outros comandos
 
 - `cls` : limpa o terminal
+- `help dir` : ajuda do comando
