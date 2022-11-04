@@ -1,6 +1,7 @@
 # Prompt do Windows
 
 - ferramentas na linha de comando podem ser controlados através de scripts: automação
+	- backup de arquivos
 - Prompt de comando (cmd):  terminal ou console do windows
 - iniciar: prompt ou cmd
 	- inicia automaticamente na pasta inicial do usuário *Home* 
@@ -15,10 +16,10 @@
 
 ## Comandos
 
-### trabalhando com arquivos
+### trabalhando com arquivos e pastas
 
 - `echo Oi Mundo` : imprime no terminal
-	- echo Oi Mundo > saida.txt : imprime no arquivo saida.txt
+	- `echo Oi Mundo > saida.txt` : imprime no arquivo saida.txt
 		- `>` pega a saída de um comando e grava no arquivo indicado ou repassa para outro comando
 		- `>>` cria um arquivo novo quando o arquivo que pedimos não existir! Caso ele já exista, ele adiciona o novo conteúdo ao final do arquivo, sem sobrescrevê-lo
 - `type saida.txt` : ve o conteúdo do arquivo todo de uma vez
@@ -28,7 +29,9 @@
 	- `enter`: navega linha a linha
 	- `q` : sai da navegação do arquivo sem precisar chegar no final
 - `del saida.txt`: apaga o arquivo
-- `copy saida.txt saida2.txt` : cria uma cópia 
+- `copy saida.txt saida2.txt` : cria uma cópia de arquivo
+- `xcopy` : copia pastas
+	- `xcopy /E /Y "C:\Users\caelum\codigo" "C:\Users\caelum\backup"` copia as sub-pastas e confirma automaticamente a sobreescrita de arquivos
 - `rename saida2.txt mensagem.txt` : renomear arquivo e pastas
 - `move mensagem.txt .. ` : move arquivo ou pasta para outro diretório
 
@@ -51,3 +54,17 @@
 
 - `cls` : limpa o terminal
 - `help dir` : ajuda do comando
+
+
+### Scripts
+- batch: executar vários comandos em lote
+- `script.bat` executa o script
+- `pause` pausa a execução dos comandos em lote e aguarda a confirmação do usuário para continuar sua execução
+- `ctrl + c` : aborta a execução
+
+### cmder
+- linha de comando colorida
+- [link] (https://cmder.app/)
+- versão mini. Descompactar
+
+
