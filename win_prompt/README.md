@@ -22,8 +22,8 @@
 	- `echo Oi Mundo > saida.txt` : imprime no arquivo saida.txt
 		- `>` pega a saída de um comando e grava no arquivo indicado ou repassa para outro comando
 		- `>>` cria um arquivo novo quando o arquivo que pedimos não existir! Caso ele já exista, ele adiciona o novo conteúdo ao final do arquivo, sem sobrescrevê-lo
+	- **%variavel%** : para ver o conteúdo da variável
 	- `echo %date%` : imprime a data atual
-	- `echo %time%` : imprime a hora
 - `type saida.txt` : ve o conteúdo do arquivo todo de uma vez
 - `more saida.txt` : exibir página por página do arquivo
 	- Útil para ler arquivos de logs de uma aplicação que esta num servidor da núvem
@@ -60,10 +60,28 @@
 
 ### Scripts
 - batch: executar vários comandos em lote
+- pasta **bin**: pasta onde estão os executáveis e scripts das ferramentas
 - `script.bat` executa o script
+	- executar o script a partir de qualquer pasta,
+
 - `pause` pausa a execução dos comandos em lote e aguarda a confirmação do usuário para continuar sua execução
 - `ctrl + c` : aborta a execução
 - `@echo off` : desabilita a exibição dos comandos na execução do script. Começar o script com esse comando
+
+### Variáveis do ambiente 
+- não é case-sensitive
+- **HOMEPATH** : pasta raiz do usuário
+- **PATH** : contendo o local padrão aonde se encontram os caminhos para os scripts. windows vai encontrar automaticamente os scripts aqui definidos
+- **date**
+- **time**
+- **set** : mostra todas as variáveis de ambiente
+	- `set PATH=%PATH%;C:\Users\Jefferson\bin` : redefine o PATH, concatenando o novo caminho  até o terminal ser fechado
+	- `set PASTA_CODIGO=%HOMEPATH%\bin` : cria uma nova variável de ambiente até o terminal ser fechado
+- **setx**
+	- `setx PATH "%PATH%;C:\Users\Jefferson\bin" /M`
+		- /M : qdo queremos alterar uma variável do sistema
+		- usar em modo administrador
+
 
 ### cmder
 - linha de comando colorida
