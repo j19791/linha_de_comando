@@ -1,3 +1,4 @@
+@echo off
 cls 
 echo Realmente quer fazer backup ? 
 pause
