@@ -22,6 +22,7 @@
 - `echo Oi Mundo` : imprime no terminal
 	- `echo Oi Mundo > saida.txt` : imprime no arquivo saida.txt
 		- `>` pega a saída de um comando e grava no arquivo indicado ou repassa para outro comando
+		- `> NUL` oculta a mensagem de saída
 		- `>>` cria um arquivo novo quando o arquivo que pedimos não existir! Caso ele já exista, ele adiciona o novo conteúdo ao final do arquivo, sem sobrescrevê-lo
 	- **%variavel%** : para ver o conteúdo da variável
 	- `echo %date%` : imprime a data atual
@@ -46,28 +47,42 @@
 	- `dir /O:s` : ordena a saida do comando dir pelo tamanho (s: size)
 	- `dir /O:D` : ordena a saida do comando dir pela data
 	- `dir /O:D  C:\` : mostra o conteúdo do diretório C:\ e ordena a saida do comando dir pela data	
-- `cd` : change directory - entra em uma subpasta
+- `cd` : change directory` entra em uma subpasta
 	- `cd .. ` : sobe na hierárquia de diretórios (diretório acima daquele que vc ja esta)
 - `mkdir codigo` : make directory : cria novo diretório
 - `rmdir codigo_java` : remove o diretório
 - `tree`: mostra as pastas e subpastas organizadas em uma árvore
-
 
 ### Outros comandos
 
 - `cls` : limpa o terminal
 - `help dir` : ajuda do comando
 
-
 ### Scripts
 - batch: executar vários comandos em lote
 - pasta **bin**: pasta onde estão os executáveis e scripts das ferramentas
 - `script.bat` executa o script
-	- executar o script a partir de qualquer pasta,
-
+	- executar o script a partir de qualquer pasta, incluir no **PATH**
 - `pause` pausa a execução dos comandos em lote e aguarda a confirmação do usuário para continuar sua execução
 - `ctrl + c` : aborta a execução
 - `@echo off` : desabilita a exibição dos comandos na execução do script. Começar o script com esse comando
+- `@ECHO ON` mostra informações e mensagens nativas do prompt
+- `ECHO.`  deixa uma linha em branco
+- `@ECHO` oculta o prompt durante toda execução
+- `EXIST` verifica se algo existe, uma variável por exemplo
+- `GOTO` vai para um determinado ponto do arquivo
+- `:NOME` ponto de parada que pode ser chamado através do GOTO NOME
+- `FOR` estrutura de repetição
+	```
+		for %%f in (*.mp4) do (
+			ffmpeg -i "%%f" -vn -ar 44100 -ac 2 -ab 192k -f mp3 "%%f".mp3
+    	)
+	```
+- `MSG *` mostra um balão de aviso na tela
+- `REM` usado para fazer comentários que não serão interpretados pelo prompt
+- `START` inicializa um aplicativo
+- `CALL "%variavel%"` abre um arquivo/programa com espaços no nome
+- `IF NOT DEFINED "%variavel%" GOTO comando` se a variável não estiver definida vai para uma seção específica do arquivo
 
 ### Variáveis do ambiente 
 - não é case-sensitive
@@ -76,7 +91,14 @@
 - **date**
 - **time**
 - **PROCESSOR_ARCHITECTURE**
-
+- **username** nome da conta do usuário logado
+- **userprofile** pasta do perfil do usuário
+- **temp** pasta temporária
+- **windir** pasta de instalação do Windows
+- **systemroot** pasta raiz do sistema
+- **userdomain** nome do domínio
+- **systemdrive** letra do drive onde o sistema está instalado
+- **cd** retorna o caminho do .bat
 - **JAVA_HOME%** : aponta para o diretório raiz do java (sem bin)
 	- X86 : 32 BITS
 	- amd64 OU ia64: 64 BITS
