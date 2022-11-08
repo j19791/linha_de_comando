@@ -13,6 +13,7 @@
 	- caelum : sub-pasta de Users
 	- \ contra barra: separador de diretórios da linha de comando
 - evite acentos e espaços nos nomes dos diretórios: usar _ invés do espaço
+- usar aspas duplas quando tem espaço no caminho do path
 
 ## Comandos
 
@@ -44,7 +45,7 @@
 	- `dir ..` : lista os arquivos e pastas do diretório acima
 	- `dir /O:s` : ordena a saida do comando dir pelo tamanho (s: size)
 	- `dir /O:D` : ordena a saida do comando dir pela data
-	- `dir /O:D  C:\` : mostra o conteúdo do diretório C:\ e ordena a saida do comando dir pela data
+	- `dir /O:D  C:\` : mostra o conteúdo do diretório C:\ e ordena a saida do comando dir pela data	
 - `cd` : change directory - entra em uma subpasta
 	- `cd .. ` : sobe na hierárquia de diretórios (diretório acima daquele que vc ja esta)
 - `mkdir codigo` : make directory : cria novo diretório
@@ -74,6 +75,11 @@
 - **PATH** : contendo o local padrão aonde se encontram os caminhos para os scripts. windows vai encontrar automaticamente os scripts aqui definidos
 - **date**
 - **time**
+- **PROCESSOR_ARCHITECTURE**
+
+- **JAVA_HOME%** : aponta para o diretório raiz do java (sem bin)
+	- X86 : 32 BITS
+	- amd64 OU ia64: 64 BITS
 - **set** : mostra todas as variáveis de ambiente
 	- `set PATH=%PATH%;C:\Users\Jefferson\bin` : redefine o PATH, concatenando o novo caminho  até o terminal ser fechado
 	- `set PASTA_CODIGO=%HOMEPATH%\bin` : cria uma nova variável de ambiente até o terminal ser fechado
@@ -82,12 +88,14 @@
 		- /M : qdo queremos alterar uma variável do sistema
 		- usar em modo administrador
 
-
-### cmder
-- linha de comando colorida
-- [link] (https://cmder.app/)
-- versão mini. Descompactar
-- multiplas abas
-- copiar e colar + fácil
-
-
+### outros
+- wmic: Windows Management Instrumentation
+	- `wmic OS get OSArchitecture` : arquitetura do processador
+- RapidEE: editor de variáveis de ambiente
+	- detecta caminhos inválidos
+	- remove duplicatas e variáveis em branco
+- cmder: linha de comando colorida
+	- [link] (https://cmder.app/)
+	- versão mini. Descompactar
+	- multiplas abas
+	- copiar e colar + fácil
