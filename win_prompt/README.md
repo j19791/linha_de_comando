@@ -88,6 +88,19 @@
 		- /M : qdo queremos alterar uma variável do sistema
 		- usar em modo administrador
 
+### Chocolatey : gerenciador de pacotes
+- instalador silencioso global para aplicativos e ferramentas
+- instalação como administrador peo próprio cmd
+```
+@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+```
+- [acha pacotes] (https://community.chocolatey.org/packages)
+- `choco install python2` : baixa, instala e configura o ambiente para o Phyton 2.7
+- `choco install -y nodejs.install -version 4.2.2` : indica versao e -y ja confirma a instalação
+- `choco uninstall python2` remove o pacote
+- `choco list <nome_do_pacote>` busca o pacote na internet para baixar
+	- `choco list -l` lista os pacotes ja instalados localmente através do chocolatey
+
 ### outros
 - wmic: Windows Management Instrumentation
 	- `wmic OS get OSArchitecture` : arquitetura do processador
