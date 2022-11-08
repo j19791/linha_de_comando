@@ -116,7 +116,7 @@
 ```
 @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
 ```
-- [acha pacotes] (https://community.chocolatey.org/packages)
+- (acha pacotes)[https://community.chocolatey.org/packages]
 - `choco install python2` : baixa, instala e configura o ambiente para o Phyton 2.7
 - `choco install -y nodejs.install -version 4.2.2` : indica versao e -y ja confirma a instalação
 - `choco uninstall python2` remove o pacote
@@ -130,7 +130,7 @@
 	- detecta caminhos inválidos
 	- remove duplicatas e variáveis em branco
 - cmder: linha de comando colorida
-	- [link] (https://cmder.app/)
+	- [https://cmder.app/]
 	- versão mini. Descompactar
 	- multiplas abas
 	- copiar e colar + fácil
