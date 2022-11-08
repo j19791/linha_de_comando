@@ -63,6 +63,8 @@
 - pasta **bin**: pasta onde estão os executáveis e scripts das ferramentas
 - `script.bat` executa o script
 	- executar o script a partir de qualquer pasta, incluir no **PATH**
+- `set /p url="url: "` : solicita ao usuário a passagem de um valor para ser atribuido na variável
+- `%1` pega o valor do primeiro parametro passado durante a chamada do script
 - `pause` pausa a execução dos comandos em lote e aguarda a confirmação do usuário para continuar sua execução
 - `ctrl + c` : aborta a execução
 - `@echo off` : desabilita a exibição dos comandos na execução do script. Começar o script com esse comando
@@ -105,6 +107,7 @@
 - **set** : mostra todas as variáveis de ambiente
 	- `set PATH=%PATH%;C:\Users\Jefferson\bin` : redefine o PATH, concatenando o novo caminho  até o terminal ser fechado
 	- `set PASTA_CODIGO=%HOMEPATH%\bin` : cria uma nova variável de ambiente até o terminal ser fechado
+	
 - **setx**
 	- `setx PATH "%PATH%;C:\Users\Jefferson\bin" /M`
 		- /M : qdo queremos alterar uma variável do sistema
